@@ -1,6 +1,8 @@
 export default function getProducts() {
 
-    const arr = [{ title: "title1" }];
-    
+    const arr = fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(data => console.log(data));
+
     return arr;
 }
